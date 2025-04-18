@@ -1,0 +1,169 @@
+.grid {
+    border: 1px solid black;
+    height: 180px;
+    width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid div{
+    height: 20px;
+    width: 20px;
+}
+
+.ending-block {
+    background-color: red;
+}
+
+.starting-block {
+    background-color: blue;
+}
+
+/*.log-left,
+.log-right {
+    background-color: lightblue;
+}*/
+
+/*.car-left,
+.car-right {
+    background-color: lightgrey;
+}*/
+
+.l1, .l2, .l3 {
+    background-color: brown;
+}
+
+.l4, .l5 {
+    background-color: lightBlue;
+}
+
+.c1 {
+    background-color: black
+}
+
+.c2, .c3 {
+    background-color: lightgrey
+}
+
+.frog {
+    background-color: green;
+}
+
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+  }
+  
+  header {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  /* Zone de jeu */
+  #rock, #paper, #scissors {
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+  }
+  
+  #rock {
+    background-color: #ff6347;
+  }
+  
+  #paper {
+    background-color: #4682b4;
+  }
+  
+  #scissors {
+    background-color: #32cd32;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Résultats */
+  #result, #computer-choice, #user-choice {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #result {
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  #computer-choice {
+    color: #f04e23;
+  }
+  
+  #user-choice {
+    color: #3498db;
+  }
+  
+  /* Ajout d'un fond et d'une ombre */
+  h2, button {
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  
