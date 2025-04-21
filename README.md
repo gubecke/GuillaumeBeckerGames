@@ -1,1 +1,1 @@
-Site: https://GuillaumeBeckerGames.onrendercom
+Site: https://GuillaumeBeckerGames.onrender.com
