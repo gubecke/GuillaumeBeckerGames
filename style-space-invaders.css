@@ -1,3 +1,4 @@
+/* === EXISTANT === */
 .grid {
   width: 600px;
   height: 600px;
@@ -35,31 +36,6 @@
 .boom {
   background-color: red;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Style général */
 body {
@@ -114,7 +90,6 @@ h2 {
   margin: 10px 0;
 }
 
-/* Ajout d'un fond et d'une ombre */
 h2, button {
   text-align: center;
   margin: 20px;
@@ -161,37 +136,82 @@ button.clicked {
   animation: buttonBounce 0.3s ease;
 }
 
-.speed-display {
-  font-size: 20px;
-  margin: 10px;
-  padding: 10px 15px;
+/* === AJOUTS MENU === */
+
+/* Bouton menu */
+#menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
   background-color: #333;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background-color 0.3s ease;
 }
 
-.results {
-  font-size: 36px;
-  font-weight: bold;
-  color: #ffffff;
+#menu-toggle:hover {
+  background-color: #555;
+}
+
+/* Menu latéral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* caché à gauche */
+  width: 250px;
+  height: 100vh;
   background-color: #222;
-  padding: 15px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin: 20px 0;
-  text-align: center;
-  letter-spacing: 2px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  transition: left 0.3s ease;
+  z-index: 1050;
 }
 
-.results.win {
-  background-color: #28a745;
-  transform: scale(1.05);
+.side-menu.open {
+  left: 0; /* visible */
 }
 
-.results.lose {
-  background-color: #dc3545;
-  transform: scale(1.05);
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu ul li {
+  margin: 15px 0;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.side-menu ul li a:hover {
+  background-color: #444;
+}
+
+/* Style du score */
+.results {
+  font-size: 40px;
+  color: #333;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Style affichage vitesse */
+.speed-display {
+  font-size: 18px;
+  margin: 10px 20px;
+  font-weight: 600;
+  color: #555;
 }
