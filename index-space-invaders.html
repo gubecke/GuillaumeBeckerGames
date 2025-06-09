@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
-        <title>GuillaumeBeckerGamesWebside</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Space-Invaders</title>
+        <link rel="stylesheet" href="style-space-invaders.css">
     </head>
     <body>
         <header>
@@ -16,13 +16,18 @@
                     <li><a href="index-break-out.html">Break-out</a></li>
                     <li><a href="index-frogger.html">Frogger</a></li>
                     <li><a href="index-connect-four.html">Connect-four</a></li>
-                    <li><a href="index-space-invaders.html"></a></li>
+                    <li><a href="index-space-invaders.html">Space-Invaders</a></li>
                 </ul>
             </nav>
         </header>
-        
         <main>
-            <h1>In progress</h1>
+            <button id="more-difficulty-button">difficulty +1</button>
+            <button id="start-button">start</button>
+            <button id="less-difficulty-button">difficulty -1</button>
+            <h1 class="results">0</h1>
+            <h2 class="speed-display">Vitesse : 500 ms</h2>
+            <div class="grid"></div>
+            <script src="app-space-invaders.js"></script>
         </main>
     </body>
 </html>

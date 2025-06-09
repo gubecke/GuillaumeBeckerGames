@@ -1,9 +1,65 @@
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    height: 300px;
-  }
+  width: 600px;
+  height: 600px;
+  border: solid black 2px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  width: 40px;
+  height: 40px;
+}
+
+.invader {
+  background-image: url('invader-space-invaders.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.shooter {
+  background-image: url('tireur-space-invaders.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.laser {
+  background-image: url('laser-space-invaders.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.boom {
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Style général */
 body {
@@ -58,59 +114,6 @@ h2 {
   margin: 10px 0;
 }
 
-/* Zone de jeu */
-#rock, #paper, #scissors {
-  font-size: 18px;
-  padding: 15px 30px;
-  margin: 10px;
-  border: none;
-  background-color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  border-radius: 5px;
-}
-
-#rock {
-  background-color: #ff6347;
-}
-
-#paper {
-  background-color: #4682b4;
-}
-
-#scissors {
-  background-color: #32cd32;
-}
-
-button:hover {
-  background-color: #ddd;
-  transform: scale(1.1);
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-/* Résultats */
-#result, #computer-choice, #user-choice {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-}
-
-#result {
-  margin-top: 20px;
-  color: #333;
-}
-
-#computer-choice {
-  color: #f04e23;
-}
-
-#user-choice {
-  color: #3498db;
-}
-
 /* Ajout d'un fond et d'une ombre */
 h2, button {
   text-align: center;
@@ -123,3 +126,72 @@ body {
   background-color: #f2f2f2;
 }
 
+button {
+  background-color: #4CAF50; /* Vert */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  transform: scale(0.98);
+  background-color: #3e8e41;
+}
+
+/* Animation bouton au clic */
+@keyframes buttonBounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.9); }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+button.clicked {
+  animation: buttonBounce 0.3s ease;
+}
+
+.speed-display {
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.results {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #222;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.results.win {
+  background-color: #28a745;
+  transform: scale(1.05);
+}
+
+.results.lose {
+  background-color: #dc3545;
+  transform: scale(1.05);
+}
