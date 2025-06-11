@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <title>Space-Invaders</title>
@@ -7,10 +7,8 @@
 </head>
 <body>
 
-  <!-- Bouton pour ouvrir/fermer le menu -->
   <button id="menu-toggle">☰ Menu</button>
 
-  <!-- Menu latéral -->
   <nav id="side-menu" class="side-menu">
     <ul>
       <li><a href="index.html">Accueil</a></li>
@@ -24,7 +22,6 @@
     </ul>
   </nav>
 
-  <!-- Contenu principal du jeu -->
   <main>
     <button id="more-difficulty-button">difficulty +1</button>
     <button id="start-button">start</button>
@@ -33,9 +30,15 @@
     <div class="speed-display">Vitesse : 500 ms</div>
     <h1 class="results">0</h1>
     <div class="grid"></div>
+
+    <!-- BOUTONS TACTILES -->
+    <div class="mobile-controls">
+      <button id="left-button">←</button>
+      <button id="shoot-button">▲</button>
+      <button id="right-button">→</button>
+    </div>
   </main>
 
-  <!-- Script du jeu -->
   <script src="app-space-invaders.js"></script>
 </body>
 </html>
