@@ -159,13 +159,13 @@ function updateDifficulty(newSpeed) {
 
 lessDifficult.addEventListener('click', () => {
   if (invadersSpeed < 2000) {
-    updateDifficulty(invadersSpeed + 100);
+    updateDifficulty(invadersSpeed + 50);
   }
 });
 
 moreDifficult.addEventListener('click', () => {
   if (invadersSpeed > 100) {
-    updateDifficulty(invadersSpeed - 100);
+    updateDifficulty(invadersSpeed - 50);
   }
 });
 

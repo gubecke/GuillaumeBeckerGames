@@ -113,4 +113,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     createBoard()
-  })
+  }) 
+  
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const sideMenu = document.getElementById('side-menu');
+
+  if (menuToggle && sideMenu) {
+    menuToggle.addEventListener('click', () => {
+      sideMenu.classList.toggle('open')
+    });
+  }
+
+  const allButtons = document.querySelectorAll('button');
+
+  allButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.remove('clicked'); // reset si déjà cliqué
+      void button.offsetWidth; // force le reflow pour relancer l'animation
+      button.classList.add('clicked');
+    });
+  });
+});

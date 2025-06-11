@@ -4,7 +4,6 @@
     width: 400px;
     height: 300px;
   }
-
 /* Style général */
 body {
   font-family: 'Arial', sans-serif;
@@ -58,60 +57,6 @@ h2 {
   margin: 10px 0;
 }
 
-/* Zone de jeu */
-#rock, #paper, #scissors {
-  font-size: 18px;
-  padding: 15px 30px;
-  margin: 10px;
-  border: none;
-  background-color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  border-radius: 5px;
-}
-
-#rock {
-  background-color: #ff6347;
-}
-
-#paper {
-  background-color: #4682b4;
-}
-
-#scissors {
-  background-color: #32cd32;
-}
-
-button:hover {
-  background-color: #ddd;
-  transform: scale(1.1);
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-/* Résultats */
-#result, #computer-choice, #user-choice {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-}
-
-#result {
-  margin-top: 20px;
-  color: #333;
-}
-
-#computer-choice {
-  color: #f04e23;
-}
-
-#user-choice {
-  color: #3498db;
-}
-
-/* Ajout d'un fond et d'une ombre */
 h2, button {
   text-align: center;
   margin: 20px;
@@ -123,3 +68,117 @@ body {
   background-color: #f2f2f2;
 }
 
+button {
+  background-color: #4CAF50; /* Vert */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  transform: scale(0.98);
+  background-color: #3e8e41;
+}
+
+/* Animation bouton au clic */
+@keyframes buttonBounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.9); }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+button.clicked {
+  animation: buttonBounce 0.3s ease;
+}
+
+/* === AJOUTS MENU === */
+
+/* Bouton menu */
+#menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background-color 0.3s ease;
+}
+
+#menu-toggle:hover {
+  background-color: #555;
+}
+
+/* Menu latéral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* caché à gauche */
+  width: 250px;
+  height: 100vh;
+  background-color: #222;
+  color: white;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  transition: left 0.3s ease;
+  z-index: 1050;
+}
+
+.side-menu.open {
+  left: 0; /* visible */
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu ul li {
+  margin: 15px 0;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.side-menu ul li a:hover {
+  background-color: #444;
+}
+
+/* Style du score */
+.results {
+  font-size: 40px;
+  color: #333;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Style affichage vitesse */
+.speed-display {
+  font-size: 18px;
+  margin: 10px 20px;
+  font-weight: 600;
+  color: #555;
+}
