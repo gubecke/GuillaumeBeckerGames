@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const sideMenu = document.getElementById('side-menu');
+
+            if (menuToggle && sideMenu) {
+                menuToggle.addEventListener('click', () => {
+                sideMenu.classList.toggle('open')
+                })
+            }
+
+            const allButtons = document.querySelectorAll('button');
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.remove('clicked');
+                    void button.offsetWidth;
+                    button.classList.add('clicked');
+                })
+            })
+        })
+    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-checkers.css">
+    <title>checkers</title>
+</head>
+<body>
+ <button id="menu-toggle">☰ Menu</button>
+    <nav id="side-menu" class="side-menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index-rock-paper-scissors.html">Rock-Paper-Scissors</a></li>
+            <li><a href="index-memory.html">Memory</a></li>
+            <li><a href="index-wack-a-mole.html">Wack-A-Mole</a></li>
+            <li><a href="index-break-out.html">Break-out</a></li>
+            <li><a href="index-frogger.html">Frogger</a></li>
+            <li><a href="index-connect-four.html">Connect-four</a></li>
+            <li><a href="index-space-invaders.html">Space-Invaders</a></li>
+            <li><a href="index-checkers.html">Checkers</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Checker Game</h1>
+        <div id="tour">Tour : <span id="joueur-actuel">1 (vous)</span></div>
+    </header>
+    <main>
+        <div id="plateau"></div>
+        <div class="info-jeu">
+            <p>Vous (Blanc) : <span id="score-j1">12 pions</span></p>            
+            <p>IA (Noir) : <span id="score-j2">12 pions</span></p> 
+            <button id="nouvelle-partie">Nouvelle partie</button>        
+        </div>
+    </main>
+    <script type="module" src="main-checkers.js"></script>
+</body>
+</html> 
